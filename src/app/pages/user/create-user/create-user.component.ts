@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { UserService } from 'src/app/core/services/user.service';
 
 @Component({
@@ -9,8 +9,8 @@ import { UserService } from 'src/app/core/services/user.service';
 })
 export class CreateUserComponent implements OnInit {
 
-  userInfoForm! : FormGroup
-  constructor( private fb : FormBuilder,
+  userInfoForm! : UntypedFormGroup
+  constructor( private fb : UntypedFormBuilder,
     private userService : UserService
     ) { }
 

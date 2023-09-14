@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/core/services/user.service';
 
@@ -10,10 +10,10 @@ import { UserService } from 'src/app/core/services/user.service';
 })
 export class EditUserComponent implements OnInit {
 
-  editUserForm! : FormGroup
+  editUserForm! : UntypedFormGroup
   userId!: string;
 
-  constructor( private fb : FormBuilder,
+  constructor( private fb : UntypedFormBuilder,
     private userService : UserService,
     private activatedRoute : ActivatedRoute
     ) { }

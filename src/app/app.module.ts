@@ -7,7 +7,6 @@ import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { InterceptorService } from './core/services/interceptor.service';
-import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -19,7 +18,6 @@ import { ToastrModule } from 'ngx-toastr';
     MaterialModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ToastrModule.forRoot(),
 
 
 

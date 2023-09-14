@@ -31,8 +31,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "node_modules/ngx-toastr/toastr.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -108,5 +107,7 @@
       }
     }
   },
-  "defaultProject": "little-drop"
+  "cli": {
+    "analytics": "26fe0316-71eb-4a48-89c7-b8251c634399"
+  }
 }
