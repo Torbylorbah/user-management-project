@@ -1,0 +1,62 @@
+
+.py-3 {
+  padding-top: 0.75rem; /* Equivalent to py-3 in Tailwind */
+  padding-bottom: 0.75rem; /* Equivalent to py-3 in Tailwind */
+}
+
+.block {
+  display: block; /* Equivalent to block in Tailwind */
+}
+
+.font-bold {
+  font-weight: bold; /* Equivalent to font-bold in Tailwind */
+}
+
+.bg-dark {
+  background-color: #7C001F;
+}
+
+.text-white {
+  color: #ffffff; /* Equivalent to text-white in Tailwind */
+}
+
+.rounded {
+  border-radius: 0.25rem; /* Equivalent to rounded in Tailwind */
+}
+
+.lg\:py-4 {
+  padding-top: 1rem; /* Equivalent to lg:py-4 in Tailwind */
+  padding-bottom: 1rem; /* Equivalent to lg:py-4 in Tailwind */
+}
+
+button{
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+
+button:not(:disabled):hover {
+  box-shadow: 0px 4px 8px rgba(21, 19, 22, 0.2);
+
+}
+
+button:disabled {
+  filter: grayscale(1);
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+button:active:not(:disabled) {
+  filter: sepia(0.2);
+}
+
+::ng-deep .mat-mdc-progress-spinner {
+  --mdc-circular-progress-active-indicator-color: #fff !important;
+}
+
+.position-absolute {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 10px);
+  transform: translateY(-50%);
+}

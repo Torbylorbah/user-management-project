@@ -1,0 +1,96 @@
+.form-container{
+  padding: 1rem 2.5rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  padding-top: 2.5rem;
+  padding-bottom: 5rem;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 640px) {
+  .form-container{
+    padding-left: 1.5rem;
+    padding-right: 2.5rem;
+  }
+
+}
+.header{
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #7C001F;
+}
+.text-bold{
+  font-weight: 500;
+  font-size: 16px;
+}
+.container{
+  margin-top: 1.5rem;
+
+  @media screen and (min-width: 1024px) {
+    .lg\:mt-10 {
+      margin-top: 2.5rem;
+    }
+  }
+
+
+  @media screen and (min-width: 1536px) {
+    .xl\:mt-14 {
+      margin-top: 3.5rem;
+    }
+  }
+
+
+}
+
+.form-holder{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:50px;
+}
+.custom-input {
+  width: 100%;
+  padding-top: 0.75rem;
+  padding-bottom: 0.625rem;
+  padding-left: 0.625rem;
+  padding-right: 0.75rem;
+  border-radius: 0.25rem;
+  background-color: #F7F7F7;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border: 1px solid #F7F7F7;
+  outline: none;
+}
+
+.custom-input:focus {
+  background-color: white;
+  border-width: 2px;
+  border-color: skyBlue;
+}
+
+.button-div{
+  justify-self: center;
+
+}
+
+.submit-btn{
+  display: flex;
+  justify-content: end;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .md\:mt-10 {
+      margin-top: 2.5rem;
+  }
+}
+
+.w-full {
+  width: 100%;
+}
+
+
+

@@ -1,0 +1,64 @@
+<div class="fixed-padding-x flex flexy mt-4">
+  <div class="heading">
+    <h4 class="heading-text">USERS</h4>
+  </div>
+  <div>
+    <app-button
+      buttonStyles="btn"
+      buttonText="Add User"
+      (click)="createUser()"
+    ></app-button>
+  </div>
+</div>
+
+<div class="fixed-padding-x">
+  <div class="table-holder mt-4 hide-scrollbar">
+    <table class="fixed-padding-x">
+      <thead>
+        <tr>
+          <th>S/N</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of users; index as i">
+          <td>{{ i + 1 }}</td>
+          <td routerLink="/{{ this.item.id }}/view-user" class="cursor">
+            {{ this.item.name.firstname | titlecase }}
+            {{ this.item.name.lastname | titlecase }}
+          </td>
+          <td>{{ this.item.email }}</td>
+          <td>{{ this.item.username | titlecase }}</td>
+          <td class="large" mat-button [matMenuTriggerFor]="menu">
+            :
+            <mat-menu #menu="matMenu" class="menu">
+              <button
+                mat-menu-item
+                class="text-lg font-sans text-placeholder"
+                routerLink="/{{ this.item.id }}/edit-user"
+              >
+                Edit User
+              </button>
+              <button
+                mat-menu-item
+                class="text-lg font-sans text-placeholder"
+                (click)="deleteUser(item)"
+              >
+                Delete User
+              </button>
+            </mat-menu>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <app-empty-state *ngIf="(orders$ | async) && !(orders$ | async)!.total && filterForm.dirty"
+        image="assets/images/catalogue/catalogue-empty.svg"
+        [title]="'No Orders Found'"
+        [subtitle]="''"
+    ></app-empty-state> -->
+  </div>
+</div>

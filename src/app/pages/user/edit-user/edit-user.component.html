@@ -1,0 +1,35 @@
+<div class="form-container">
+  <h2 class="header">Edit User</h2>
+
+  <div class="container">
+    <form class="form" [formGroup]="editUserForm">
+     <div class="form-holder">
+      <div>
+        <p class="text-bold">Name:</p>
+        <input type="text" formControlName="name" class="custom-input" />
+      </div>
+      <div>
+        <p class="text-bold">Email:</p>
+        <input type="text" formControlName="email" class="custom-input" />
+      </div>
+      <div>
+        <p class="text-bold">Role:</p>
+        <input type="text" formControlName="role" class="custom-input" />
+      </div>
+     </div>
+
+      <div class="submit-btn">
+        <app-button
+          [disabled]="editUserForm.invalid"
+          buttonStyles="btn"
+          buttonText="Edit User"
+          (click)="editUser()"
+        ></app-button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+
+

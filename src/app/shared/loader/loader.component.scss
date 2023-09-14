@@ -1,0 +1,44 @@
+.loader-bg {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6))
+}
+
+.wheelUp {
+  animation: wheelUp 2s;
+  animation-iteration-count: infinite;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.loader-class {
+  position: absolute;
+  top:0px;
+  right: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+}
+
+@keyframes wheelUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-50px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+.load-text{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+

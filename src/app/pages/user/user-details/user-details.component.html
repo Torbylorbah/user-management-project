@@ -1,0 +1,36 @@
+<div class="fixed-padding-x mt-4">
+  <div class="heading">
+    <h4 class="heading-text">USER'S INFORMATION</h4>
+  </div>
+  <div class="user-details">
+    <div>
+      <p class="text-bold">First Name:</p>
+      <p>{{this.details?.name?.firstname | titlecase}}</p>
+    </div>
+    <div>
+      <p class="text-bold">Last Name:</p>
+      <p>{{this.details?.name?.lastname | titlecase}}</p>
+    </div>
+    <div>
+      <p class="text-bold">Email:</p>
+      <p>{{this.details?.email}}</p>
+    </div>
+    <div>
+      <p class="text-bold">Phone Number:</p>
+      <p>{{this.details?.phone}}</p>
+    </div>
+    <div>
+      <p class="text-bold">Address</p>
+      <p>{{this.details?.address?.street | titlecase}}</p>
+    </div>
+    <div>
+      <p class="text-bold">City</p>
+      <p>{{this.details?.address?.city | titlecase}}</p>
+    </div>
+    <div>
+      <p class="text-bold">Username</p>
+      <p>{{this.details?.username | titlecase}}</p>
+    </div>
+  </div>
+
+</div>

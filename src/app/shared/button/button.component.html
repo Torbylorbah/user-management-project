@@ -1,0 +1,14 @@
+<button
+  (click)="onClick()"
+  [disabled]="disabled || loading"
+  class="py-3 block font-bold bg-dark text-white rounded lg:py-4"
+  [class]="buttonStyles || ''"
+  [type]="type"
+>
+  <span class="relative block w-fit mx-auto">
+    <span>
+      {{ buttonText }}
+    </span>
+    
+  </span>
+</button>

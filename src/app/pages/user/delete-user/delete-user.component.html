@@ -1,0 +1,15 @@
+<div class="container">
+  <p class="text-bold mb-4">Are you sure you want to delete user?</p>
+  <div class="flex">
+    <app-button
+      buttonStyles="red-btn"
+      buttonText="Yes"
+      (click)="deleteUser()"
+    ></app-button>
+    <app-button
+      buttonStyles="btn"
+      buttonText="No"
+      (click)="close()"
+    ></app-button>
+  </div>
+</div>

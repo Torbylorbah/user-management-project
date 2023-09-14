@@ -1,0 +1,37 @@
+<div class="fixed-padding-x">
+  <div class="form-container">
+    <h2 class="header">Add User</h2>
+
+    <div class="container">
+      <form class="form" [formGroup]="userInfoForm">
+       <div class="form-holder">
+        <div>
+          <p class="text-bold">Name:</p>
+          <input type="text" formControlName="name" class="custom-input" />
+        </div>
+        <div>
+          <p class="text-bold">Email:</p>
+          <input type="text" formControlName="email" class="custom-input" />
+        </div>
+        <div>
+          <p class="text-bold">Role:</p>
+          <input type="text" formControlName="role" class="custom-input" />
+        </div>
+       </div>
+
+        <div class="submit-btn">
+          <app-button
+            [disabled]="userInfoForm.invalid"
+            buttonStyles="mt-6 md:mt-10 w-full"
+            buttonText="Add User"
+            (click)="addUser()"
+          ></app-button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+

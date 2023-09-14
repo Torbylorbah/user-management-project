@@ -1,0 +1,20 @@
+.user-details{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 24px;
+}
+
+.text-bold{
+  font-weight: 500;
+  font-size: 16px;
+}
+.heading{
+  padding: 16px 0px;
+
+  .heading-text{
+    font-size: 24px;
+    font-weight: 500;
+    color: #7C001F;
+  }
+}

@@ -1,0 +1,63 @@
+.table-holder {
+  overflow-y: auto !important;
+  background-color: white;
+  border-radius: 7px;
+  border: 0;
+  padding: 20px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.table-holder table {
+  width: 100%;
+  white-space: nowrap;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.table-holder table td {
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.dashboard-div{
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 16px 0px;
+  border: 1px solid ;
+  border-top: black;
+  border-bottom: black;
+}
+
+.flexy{
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+}
+.large{
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.menu{
+  width: 234px;
+}
+.text-bold{
+  font-weight: 500;
+  font-size: 16px;
+}
+.heading{
+  padding: 16px 0px;
+
+  .heading-text{
+    font-size: 24px;
+    font-weight: 500;
+    color: #7C001F;
+  }
+}
