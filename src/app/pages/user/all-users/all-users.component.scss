@@ -24,6 +24,21 @@
   font-size: 14px;
   white-space: nowrap;
 }
+thead{
+  background-color: #7C001F;
+  color: white;
+  font-size: 0.875rem;
+	text-transform: uppercase;
+	letter-spacing: 2%;
+
+}
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #eee;
+}
 
 .dashboard-div{
   position: sticky;
