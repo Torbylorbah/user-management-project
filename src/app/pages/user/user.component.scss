@@ -14,12 +14,8 @@
     border-right: 1px solid #d9dfe9;
     background: #7C001F;
     color: #ffffff;
-
-    @media screen and (max-width: 360px){
-      
-    }
-
   }
+
 
   header {
     grid-area: header;
@@ -39,8 +35,8 @@
   }
 
   @media (max-width: 768px) {
-    aside {
-      width: 100%;
+    aside{
+      display: none;
     }
   }
 

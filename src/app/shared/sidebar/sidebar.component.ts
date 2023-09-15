@@ -13,7 +13,7 @@ export class SidebarComponent implements OnInit {
   }
 
   closeTab(){
-    window.close();
+    window.open('https://google.com', '_blank');
   }
 
 }

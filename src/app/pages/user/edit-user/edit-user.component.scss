@@ -1,8 +1,11 @@
 .form-container{
   padding: 1rem 2.5rem;
+  background-color: #fff;
   border-radius: 0.25rem;
   padding-top: 2.5rem;
   padding-bottom: 5rem;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 @media screen and (min-width: 640px) {
   .form-container{
@@ -11,38 +14,50 @@
   }
 
 }
+
+.heading{
+  padding: 16px 4px;
+  display: flex;
+  gap: 12px;
+  justify-items: center;
+
+  .heading-text{
+    font-size: 24px;
+    font-weight: 500;
+    color: #7C001F;
+  }
+}
+.hoverme {
+  cursor: pointer;
+  transition: 0.3s;
+svg {
+  transition: 0.3s;
+}
+}
+
+.hoverme:hover {
+  span {
+      font-weight: 700;
+  }
+svg {
+  transform: translateX(-5px);
+}
+}
 .header{
   font-weight: bold;
   font-size: 1.5rem;
-  text-align: center;
-  color: #333;
+  text-align: left;
+  color: #7C001F;
 }
 .text-bold{
   font-weight: 500;
   font-size: 16px;
 }
-.container{
-  margin-top: 1.5rem;
-
-  @media screen and (min-width: 1024px) {
-    .lg\:mt-10 {
-      margin-top: 2.5rem;
-    }
-  }
-
-
-  @media screen and (min-width: 1536px) {
-    .xl\:mt-14 {
-      margin-top: 3.5rem;
-    }
-  }
-
-
+.py-5{
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
-form{
 
-
-}
 .form-holder{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -65,7 +80,7 @@ form{
 .custom-input:focus {
   background-color: white;
   border-width: 2px;
-  border-color: skyBlue;
+  border-color: #a13d5683;
 }
 
 .button-div{
@@ -75,7 +90,7 @@ form{
 
 .submit-btn{
   display: flex;
-  justify-content: flex-end;
+  justify-content: end;
 }
 
 .mt-6 {
@@ -92,5 +107,56 @@ form{
   width: 100%;
 }
 
+.text-red{
+  color: red !important;
+  font-size: small;
+}
+.red{
+  color: red !important;
+  font-size: 16px;
+}
+
+.mt-1{
+  margin-top: 4px;
+}
+
+@media (max-width: 768px){
 
 
+  .heading{
+    padding: 10px 4px;
+    display: flex;
+    gap: 8px;
+    justify-items: center;
+
+    .heading-text{
+      font-size: 18px;
+      font-weight: 500;
+      color: #7C001F;
+    }
+  }
+    .name-div{
+      gap: 4px;
+    }
+    .form-container{
+      padding: 0.5rem 1.5rem;
+      padding-top: 1.5rem;
+      padding-bottom: 3rem;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+
+    .form-holder{
+      grid-template-columns: 1fr;
+      gap:10px;
+    }
+
+    .submit-btn{
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .btn{
+      padding: 40px 12px !important;
+    }
+  }

@@ -1,3 +1,4 @@
+import { LocationStrategy } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
@@ -19,6 +20,7 @@ export class EditUserComponent implements OnInit {
     private userService : UserService,
     private activatedRoute : ActivatedRoute,
     private notify : NotificationService,
+    private location : LocationStrategy
 
     ) { }
 
@@ -65,6 +67,10 @@ export class EditUserComponent implements OnInit {
 
       })
 
+    }
+
+    back(){
+      this.location.back()
     }
 
 }

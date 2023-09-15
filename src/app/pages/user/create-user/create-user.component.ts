@@ -1,3 +1,4 @@
+import { LocationStrategy } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { NotificationService } from 'src/app/core/services/notification.service';
@@ -16,7 +17,8 @@ export class CreateUserComponent implements OnInit {
 
   constructor( private fb : UntypedFormBuilder,
     private userService : UserService,
-    private notify : NotificationService
+    private notify : NotificationService,
+    private location : LocationStrategy
     ) { }
 
   ngOnInit(): void {
@@ -36,11 +38,13 @@ export class CreateUserComponent implements OnInit {
       if (res.error) {
         return this.notify.publishMessages('error', 'An error occured' );
       }
-      this.notify.publishMessages('success', 'User Successfully Created');
+      this.notify.publishMessages('success', 'User successfully added');
 
     })
   }
 
-
+  back(){
+    this.location.back()
+  }
 
 }

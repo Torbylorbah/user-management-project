@@ -105,11 +105,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .mt-4{
   margin-top: 24px;
+
 }
 
 .btn{
   background: #000;
-  padding: 12px 24px;
+  padding: 12px 40px;
   font-size: 16px;
   font-weight: 500;
   color: white;
@@ -134,4 +135,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .cursor{
   cursor: pointer;
 }
+
+@media (max-width: 768px){
+.mt-4{
+  margin-top: 16px;
+
+}
+.btn{
+  padding: 12px 30px;
+  font-size: 12px;
+}
+}
+
+
 

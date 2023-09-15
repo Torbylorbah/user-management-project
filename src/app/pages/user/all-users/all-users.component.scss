@@ -40,6 +40,10 @@ tbody tr:nth-child(even) {
   background-color: #eee;
 }
 
+.table-head{
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
 .dashboard-div{
   position: sticky;
   top: 0;
@@ -56,8 +60,8 @@ tbody tr:nth-child(even) {
   justify-items: center;
 }
 .large{
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 20px !important;
+  font-weight: 600 !important;
   cursor: pointer;
 }
 .menu{
@@ -74,5 +78,32 @@ tbody tr:nth-child(even) {
     font-size: 24px;
     font-weight: 500;
     color: #7C001F;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-holder table {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .heading{
+    padding: 12px 0px;
+
+    .heading-text{
+      font-size: 18px;
+      font-weight: 500;
+      color: #7C001F;
+    }
+  }
+  .table-holder table td {
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 14px;
+    white-space: nowrap;
   }
 }

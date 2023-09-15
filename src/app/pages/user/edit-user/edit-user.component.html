@@ -1,33 +1,74 @@
-<div class="form-container">
-  <h2 class="header">Edit User</h2>
-
-  <div class="container">
-    <form class="form" [formGroup]="editUserForm">
-     <div class="form-holder">
-      <div>
-        <p class="text-bold">Name:</p>
-        <input type="text" formControlName="name" class="custom-input" />
+<div class="fixed-padding-x">
+  <h2 class="header"></h2>
+  <div class="flex flexy">
+    <div class="heading">
+      <div class="hoverme" (click)="back()">
+        <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 12H4M4 12L10 6M4 12L10 18" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
       </div>
       <div>
-        <p class="text-bold">Email:</p>
-        <input type="text" formControlName="email" class="custom-input" />
+        <h4 class="heading-text">Edit User</h4>
       </div>
-      <div>
-        <p class="text-bold">Role:</p>
-        <input type="text" formControlName="role" class="custom-input" />
-      </div>
-     </div>
+    </div>
+  </div>
+  <div class="form-container">
+    <div class="container fixed-padding-x py-5">
+      <form class="form" [formGroup]="editUserForm">
+       <div class="form-holder">
+        <div>
+          <p class="text-bold">Name<span class="red">*</span></p>
+          <input type="text" formControlName="name" class="custom-input" />
+          <ng-container>
+            <small
+              class="text-red"
+              *ngIf="$any(editUserForm.get('name')).errors?.['required'] && $any(editUserForm.get('name')).touched"
+            >
+            This field is required
+            </small>
+          </ng-container>
+        </div>
+        <div>
+          <p class="text-bold">Email<span class="red">*</span></p>
+          <input type="text" formControlName="email" class="custom-input"/>
+          <ng-container>
+            <small
+              class="text-red"
+              *ngIf="$any(editUserForm.get('email')).errors?.['required'] && $any(editUserForm.get('email')).touched"
+            >
+              This field is required
+            </small>
+            <small
+              class="text-red"
+              *ngIf="$any(editUserForm.get('email')).errors?.['pattern']"
+            >
+              Please enter a valid email
+            </small>
+          </ng-container>
+        </div>
+        <div>
+          <p class="text-bold">Role<span class="red">*</span></p>
+          <input type="text" formControlName="role" class="custom-input" />
+          <ng-container>
+            <small
+              class="text-red"
+              *ngIf="$any(editUserForm.get('role')).errors?.['required'] && $any(editUserForm.get('role')).touched"
+            >
+              This field is required
+            </small>
+          </ng-container>
+        </div>
+       </div>
 
-      <div class="submit-btn">
-        <app-button
-          [disabled]="editUserForm.invalid"
-          buttonStyles="btn"
-          buttonText="Edit User"
-          (click)="editUser()"
-        ></app-button>
-      </div>
+        <div class="submit-btn">
+          <app-button
+            [disabled]="editUserForm.invalid"
+            buttonStyles="btn"
+            buttonText="Edit User"
+            (click)="editUser()"
+          ></app-button>
+        </div>
 
-    </form>
+      </form>
+    </div>
   </div>
 </div>
 

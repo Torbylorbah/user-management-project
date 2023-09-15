@@ -1,6 +1,6 @@
-<div class="fixed-padding-x flex flexy mt-4">
+<div class="fixed-padding-x flex flexy mt-4 sm">
   <div class="heading">
-    <h4 class="heading-text">USERS</h4>
+    <h4 class="heading-text">Users</h4>
   </div>
   <div>
     <app-button
@@ -11,16 +11,16 @@
   </div>
 </div>
 
-<div class="fixed-padding-x">
+<div class="fixed-padding-x sm">
   <div class="table-holder mt-4 hide-scrollbar">
     <table class="fixed-padding-x">
       <thead>
         <tr>
-          <th>S/N</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Role</th>
-          <th>&nbsp;</th>
+          <th class="table-head">S/N</th>
+          <th class="table-head">Name</th>
+          <th class="table-head">Email</th>
+          <th class="table-head">Role</th>
+          <th class="table-head">&nbsp;</th>
         </tr>
       </thead>
       <tbody>
@@ -37,14 +37,12 @@
             <mat-menu #menu="matMenu" class="menu">
               <button
                 mat-menu-item
-                class="text-lg font-sans text-placeholder"
                 routerLink="/{{ this.item.id }}/edit-user"
               >
                 Edit User
               </button>
               <button
                 mat-menu-item
-                class="text-lg font-sans text-placeholder"
                 (click)="deleteUser(item)"
               >
                 Delete User
