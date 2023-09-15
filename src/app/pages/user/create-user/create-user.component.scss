@@ -1,5 +1,5 @@
 .form-container{
-  padding: 1rem 0rem;
+  padding: 1rem 2.5rem;
   background-color: #fff;
   border-radius: 0.25rem;
   padding-top: 2.5rem;
@@ -7,7 +7,13 @@
   margin-top: 20px;
   margin-bottom: 50px;
 }
+@media screen and (min-width: 640px) {
+  .form-container{
+    padding-left: 1.5rem;
+    padding-right: 2.5rem;
+  }
 
+}
 
 .heading{
   padding: 16px 4px;
@@ -103,51 +109,56 @@ svg {
 
 .text-red{
   color: red !important;
-  font-size: x-small;
-}
-.mt-1{
-  margin-top: 4px;
+  font-size: small;
 }
 .red{
   color: red !important;
   font-size: 16px;
 }
 
+.mt-1{
+  margin-top: 4px;
+}
+
 @media (max-width: 768px){
-.heading{
-  padding: 10px 4px;
-  display: flex;
-  gap: 8px;
-  justify-items: center;
 
-  .heading-text{
-    font-size: 18px;
-    font-weight: 500;
-    color: #7C001F;
-  }
-}
-  .name-div{
-    gap: 4px;
-  }
-  .form-container{
-    padding: 0.5rem 1.5rem;
-    padding-top: 1.5rem;
-    padding-bottom: 3rem;
-    margin-top: 10px;
-    margin-bottom: 30px;
-  }
 
-  .submit-btn{
+  .heading{
+    padding: 10px 4px;
     display: flex;
-    justify-content: center;
-    margin-top: 30px;
-  }
-  .btn{
-    padding: 40px 12px !important;
-  }
-}
+    gap: 8px;
+    justify-items: center;
 
-@media (max-width: 365px){
+    .heading-text{
+      font-size: 18px;
+      font-weight: 500;
+      color: #7C001F;
+    }
+  }
+    .name-div{
+      gap: 4px;
+    }
+    .form-container{
+      padding: 0.5rem 1.5rem;
+      padding-top: 1.5rem;
+      padding-bottom: 3rem;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+
+
+
+    .submit-btn{
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .btn{
+      padding: 40px 12px !important;
+    }
+  }
+
+  @media (max-width: 365px){
     .form-holder{
       grid-template-columns: 1fr;
       gap:10px;
