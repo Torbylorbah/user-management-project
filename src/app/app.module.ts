@@ -7,6 +7,9 @@ import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { InterceptorService } from './core/services/interceptor.service';
+import { NotifierModule } from 'angular-notifier';
+import { customNotifierOptions } from './types/shared-types';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { InterceptorService } from './core/services/interceptor.service';
     AppRoutingModule,
     MaterialModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    NotifierModule,
+    NotifierModule.withConfig(customNotifierOptions),
+    SharedModule
 
 
 

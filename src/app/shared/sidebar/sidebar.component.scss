@@ -3,8 +3,10 @@
 }
 .active{
   background:   rgb(80, 35, 35);
-  padding-left: calc(16px - 1px);
+  // padding-left: calc(16px - 1px);
   border-radius: 4px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 .side-bar-top{
@@ -50,8 +52,10 @@ li{
 }
 li:hover{
   background:   rgb(80, 35, 35);
-  padding-left: calc(16px - 1px);
+  padding-left: calc(16px - 6px);
   border-radius: 4px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 // .list-items-div:hover{

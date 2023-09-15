@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { NotificationService } from 'src/app/core/services/notification.service';
 import { UserService } from 'src/app/core/services/user.service';
+import { emailRegex } from 'src/environments/environment';
 
 @Component({
   selector: 'app-edit-user',
@@ -15,7 +17,9 @@ export class EditUserComponent implements OnInit {
 
   constructor( private fb : UntypedFormBuilder,
     private userService : UserService,
-    private activatedRoute : ActivatedRoute
+    private activatedRoute : ActivatedRoute,
+    private notify : NotificationService,
+
     ) { }
 
 
@@ -31,7 +35,7 @@ export class EditUserComponent implements OnInit {
     inItUserForm(){
       this.editUserForm = this.fb.group({
         name : ['', Validators.required],
-        email : ['', Validators.required],
+        email : ['', [Validators.pattern(emailRegex), Validators.required]],
         role : ['', Validators.required]
       });
     }
@@ -54,6 +58,10 @@ export class EditUserComponent implements OnInit {
 
     editUser(){
       this.userService.editUser(this.editUserForm.value,this.userId).subscribe((res : any) => {
+        if (res.error) {
+          return this.notify.publishMessages('error', 'An error occured' );
+        }
+        this.notify.publishMessages('success', 'User Successfully Updated');
 
       })
 

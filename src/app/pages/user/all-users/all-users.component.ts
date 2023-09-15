@@ -27,10 +27,6 @@ export class AllUsersComponent implements OnInit {
 
   getUsers(){
     this.userService.getUsers().subscribe((res : any)=>{
-      // if (res.error) {
-      //   return this.notify.publishMessages('error', res.message);
-      // }
-      // this.notify.publishMessages('success', res.message);
       this.users = res
      })
   }

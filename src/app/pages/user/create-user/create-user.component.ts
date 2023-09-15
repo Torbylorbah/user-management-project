@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
+import { NotificationService } from 'src/app/core/services/notification.service';
 import { UserService } from 'src/app/core/services/user.service';
+import { emailRegex } from 'src/environments/environment';
 
 @Component({
   selector: 'app-create-user',
@@ -11,7 +13,8 @@ export class CreateUserComponent implements OnInit {
 
   userInfoForm! : UntypedFormGroup
   constructor( private fb : UntypedFormBuilder,
-    private userService : UserService
+    private userService : UserService,
+    private notify : NotificationService
     ) { }
 
   ngOnInit(): void {
@@ -21,13 +24,17 @@ export class CreateUserComponent implements OnInit {
   inItUserForm(){
     this.userInfoForm = this.fb.group({
       name : ['', Validators.required],
-      email : ['', Validators.required],
+      email : ['', [Validators.pattern(emailRegex), Validators.required]],
       role : ['', Validators.required],
     });
   }
 
   addUser(){
     this.userService.createUser(this.userInfoForm.value).subscribe((res : any) => {
+      if (res.error) {
+        return this.notify.publishMessages('error', 'An error occured' );
+      }
+      this.notify.publishMessages('success', 'User Successfully Created');
 
     })
   }
