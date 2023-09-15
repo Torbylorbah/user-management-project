@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { NotificationService } from 'src/app/core/services/notification.service';
 import { UserService } from 'src/app/core/services/user.service';
-import { emailRegex } from 'src/environments/environment';
 
 @Component({
   selector: 'app-create-user',
@@ -12,6 +11,9 @@ import { emailRegex } from 'src/environments/environment';
 export class CreateUserComponent implements OnInit {
 
   userInfoForm! : UntypedFormGroup
+
+  emailRegex = `^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}$`;
+
   constructor( private fb : UntypedFormBuilder,
     private userService : UserService,
     private notify : NotificationService
@@ -24,7 +26,7 @@ export class CreateUserComponent implements OnInit {
   inItUserForm(){
     this.userInfoForm = this.fb.group({
       name : ['', Validators.required],
-      email : ['', [Validators.pattern(emailRegex), Validators.required]],
+      email : ['', [Validators.pattern(this.emailRegex), Validators.required]],
       role : ['', Validators.required],
     });
   }

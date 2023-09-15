@@ -6,7 +6,6 @@ export const environment = {
   production: false,
   apiUrl: 'https://fakestoreapi.com'
 };
-export const emailRegex = `^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}$`;
 
 /*
  * For easier debugging in development mode, you can import the following file
