@@ -1,5 +1,5 @@
 .form-container{
-  padding: 1rem 2.5rem;
+  padding: 1rem 0rem;
   background-color: #fff;
   border-radius: 0.25rem;
   padding-top: 2.5rem;
@@ -114,8 +114,6 @@ svg {
 }
 
 @media (max-width: 768px){
-
-
 .heading{
   padding: 10px 4px;
   display: flex;
@@ -139,11 +137,6 @@ svg {
     margin-bottom: 30px;
   }
 
-  .form-holder{
-    grid-template-columns: 1fr;
-    gap:10px;
-  }
-
   .submit-btn{
     display: flex;
     justify-content: center;
@@ -153,3 +146,11 @@ svg {
     padding: 40px 12px !important;
   }
 }
+
+@media (max-width: 365px){
+    .form-holder{
+      grid-template-columns: 1fr;
+      gap:10px;
+    }
+
+  }

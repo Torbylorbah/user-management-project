@@ -146,10 +146,7 @@ svg {
       margin-bottom: 30px;
     }
 
-    .form-holder{
-      grid-template-columns: 1fr;
-      gap:10px;
-    }
+  
 
     .submit-btn{
       display: flex;
@@ -159,4 +156,12 @@ svg {
     .btn{
       padding: 40px 12px !important;
     }
+  }
+
+  @media (max-width: 365px){
+    .form-holder{
+      grid-template-columns: 1fr;
+      gap:10px;
+    }
+
   }
