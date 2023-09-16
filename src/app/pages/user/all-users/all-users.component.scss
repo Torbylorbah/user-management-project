@@ -80,6 +80,14 @@ tbody tr:nth-child(even) {
     color: #7C001F;
   }
 }
+.flex-end{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mt-2{
+  margin-top: 8px;
+}
 
 @media (max-width: 768px) {
   .table-holder table {

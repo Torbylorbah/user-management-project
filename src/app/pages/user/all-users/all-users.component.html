@@ -53,7 +53,7 @@
       </tbody>
     </table>
 
-    <div class="mt-5" *ngIf="users && users?.length !== 0">
+    <div class="flex-end" *ngIf="users && users?.length !== 0">
       <pagination-controls
         (pageChange)="onPageChange($event)"
         (pageBoundsCorrection)="onPageBoundsCorrection($event)"
