@@ -15,7 +15,7 @@ export class AllUsersComponent implements OnInit {
 
   users: any;
 
-  @Input() pageChange = new EventEmitter<number>();
+  @Output() pageChange = new EventEmitter<number>();
 
   constructor(
     private userService : UserService,
