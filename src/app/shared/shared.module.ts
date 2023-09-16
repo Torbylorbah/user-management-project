@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { LoaderComponent } from './loader/loader.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -13,18 +14,20 @@ import { RouterModule } from '@angular/router';
     ButtonComponent,
     HeaderComponent,
     LoaderComponent,
-    SidebarComponent
+    SidebarComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
+    NgxPaginationModule
+
 
   ],
   exports: [
     ButtonComponent,
     HeaderComponent,
     LoaderComponent,
-    SidebarComponent
+    SidebarComponent,
   ]
 })
 export class SharedModule { }

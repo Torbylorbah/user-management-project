@@ -10,6 +10,7 @@ import { InterceptorService } from './core/services/interceptor.service';
 import { NotifierModule } from 'angular-notifier';
 import { customNotifierOptions } from './types/shared-types';
 import { SharedModule } from './shared/shared.module';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SharedModule } from './shared/shared.module';
     HttpClientModule,
     NotifierModule,
     NotifierModule.withConfig(customNotifierOptions),
-    SharedModule
+    SharedModule,
+    NgxPaginationModule
 
 
 

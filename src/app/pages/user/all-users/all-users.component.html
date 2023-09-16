@@ -53,10 +53,21 @@
       </tbody>
     </table>
 
-    <!-- <app-empty-state *ngIf="(orders$ | async) && !(orders$ | async)!.total && filterForm.dirty"
-        image="assets/images/catalogue/catalogue-empty.svg"
-        [title]="'No Orders Found'"
-        [subtitle]="''"
-    ></app-empty-state> -->
+    <div class="mt-5" *ngIf="users && users?.length !== 0">
+      <pagination-controls
+        (pageChange)="onPageChange($event)"
+        (pageBoundsCorrection)="onPageBoundsCorrection($event)"
+        [maxSize]="8"
+        [directionLinks]="true"
+        [responsive]="true"
+        [autoHide]="false"
+        previousLabel="Previous"
+        nextLabel="Next"
+        screenReaderPaginationLabel="Pagination"
+        screenReaderPageLabel="page"
+        screenReaderCurrentLabel="You're on page"
+      >
+      </pagination-controls>
+    </div>
   </div>
 </div>
